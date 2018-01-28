@@ -1,0 +1,17 @@
+
+
+Sky Conditions:
+	Seeing shows little change over night, with seeing infact improving towards the final 
+	exposures. Airmass shows a quadratic profile, increasing towards maximimum of around 2.0
+	towards the final exposures: sky conditions relatively clear, seeing does not clearly
+	correlate with air-mass. NEED TO GET TELLURIC WATER LINES.
+
+
+Light Curves.py;
+	Performs integration of flux around the Na Doublet (5980A and 5980.6A)
+	the objective is to measure the excess light curve, due to excess absorption at the 
+	Na doublet. Light curve is very noisy, need to fit for seeing and airmass to see if 
+	it improves the light curve.
+	
+
+
