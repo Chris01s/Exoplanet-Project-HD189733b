@@ -1,0 +1,31 @@
+Target: HD198733
+
+Script FitsCatg.py; 
+	Reads each fits file, from header keywords gets 
+	DPR TYPE, DPR CATG or if it is a static calibration file PRO CATG.
+	Also checks for chip (blue,red) with DET CHIPS, if it doesn't exist then its usually a 
+	calibration file. If neither PRO CATG or DPR CATG exist, then put it into unknown file.
+	A table is then created using these info.
+
+Script SOFs.py;
+	Creates sets of frames files (.sof) by obtaining biases,flats,co-efficient tables,line
+	index tables, etc. from the table.
+	This is done for each each recipe in UVES Esorex pipeline for the data reduction: a
+	function is dedicated to each recipe in the pipeline
+
+Script reduc_&_calib.py;
+	Reads in the fits table from FitsCatg.py, imports SOFs.py, creates the sofs,
+	and performs each pipeline recipe for each arm.
+	Then renames the reduced science frames and moves to another folder.
+	
+
+Script Spectra.py;
+	for each science spectrum, it combines all the spectra and normalises it. It also gets
+	time, wavelength, seeing.
+	NEED TO KNOW WHERE TO GET TELLURIC WATER CORRECTION 
+
+
+
+
+
+ 
