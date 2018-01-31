@@ -5,8 +5,8 @@ import h5py
 ##Get filepath as string
 propath = "/home/chris/Documents/Exoplanet_Research/HD189733/pro_path/"
 filepaths = {'blue': propath+"blue/fluxcal_science_blue",
-				 'redl': propath+"redl/fluxcal_science_redl",
-				 'redu': propath+"redu/fluxcal_science_redu"}
+	     'redl': propath+"redl/fluxcal_science_redl",
+	     'redu': propath+"redu/fluxcal_science_redu"}
 
 
 
@@ -26,7 +26,8 @@ for arm in ('blue','redl','redu'):
 	length = head['NAXIS1']
 	seeing = [head['ESO TEL IA FWHM']]
 	int_time = [head["EXPTIME"]]
-
+	
+	#get average airmass over the length of the exposure
 	airmass_start = head["ESO TEL AIRM START"]
 	airmass_end = head["ESO TEL AIRM END"]
 	av_airm = (airmass_start + airmass_end)/2
@@ -60,7 +61,7 @@ for arm in ('blue','redl','redu'):
 	f["int_time"] = np.array(int_time)
 	f.close()
 	
-		
+	
 	#MEDIAN DIVIDE
 	spectra = spectra.T/np.median(spectra,axis=1)
 	spectra = spectra.T
