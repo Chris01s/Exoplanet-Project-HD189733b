@@ -5,8 +5,8 @@ import h5py
 ##Get filepath as string
 propath = "/home/chris/Documents/Exoplanet_Research/HD189733/pro_path/"
 filepaths = {'blue': propath+"blue/red_science_blue",
-				 'redl': propath+"redl/red_science_redl",
-				 'redu': propath+"redu/red_science_redu"}
+	     'redl': propath+"redl/red_science_redl",
+	     'redu': propath+"redu/red_science_redu"}
 
 
 for arm in ('blue','redl','redu'):
@@ -26,6 +26,7 @@ for arm in ('blue','redl','redu'):
 	seeing = [head['ESO TEL IA FWHM']]
 	int_time = [head["EXPTIME"]]
 
+	#average airmass readings over the length of the exposure
 	airmass_start = head["ESO TEL AIRM START"]
 	airmass_end = head["ESO TEL AIRM END"]
 	av_airm = (airmass_start + airmass_end)/2
