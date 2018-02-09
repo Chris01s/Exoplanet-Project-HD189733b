@@ -22,7 +22,7 @@ Script reduc_&_calib.py;
 Script Spectra.py;
 	for each science spectrum, it combines all the spectra and normalises it. It also gets
 	time, wavelength, seeing.
-	(NEED TO CHECK FOR TELLURIC WATER CONTAMINATION) 
+	
 
 
 
