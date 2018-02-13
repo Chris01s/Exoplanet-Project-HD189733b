@@ -1,4 +1,4 @@
-# Exoplanet_Research
+# Exoplanet Project
 
 This is a repository for exoplanet data reduction tools and data analysis I have 
 been working with. The respository consists mainly of analysis of UVES data of Hot Jupiter 
